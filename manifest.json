@@ -1,0 +1,40 @@
+{
+  "manifest_version":2,
+  "name": "星维·蓝队分析师助手",  
+  "version": "1.0.0",  
+  "description": "一键查询各大情报平台；取网页中的IP和域名，进行本地情报碰撞，碰撞结果被高亮标记，并支持情报在线更新离线使用。",  
+  "content_scripts": [
+    {
+  "all_frames": true,
+	            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "file://*/*"
+            ],
+	"js": ["js/insert.js"],
+
+  "run_at": "document_start"
+   }  
+  ],
+  "background": {
+      "scripts": [ "js/background.js" ],
+      "persistent":true
+  },
+  "permissions": [
+    "*://*/"
+  ],
+  "browser_action": {
+    "default_icon": {
+     "19": "img/init.png",
+     "38": "img/init.png"
+  },
+  "default_popup": "popup.html",
+  "default_title": "星维·蓝队分析师助手"
+  },
+ "icons": {
+    "128": "img/logo_128.png",
+    "16": "img/error_16.png",
+    "48": "img/logo_48.png"
+ },
+ "incognito": "spanning"
+}

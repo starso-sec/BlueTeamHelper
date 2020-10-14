@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/popup.js"></script>
+    <title></title>
+</head>
+<style>
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.cl {
+    clear: both;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.ml5 {
+    margin-left: 10px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 16px;
+}
+.ml5 a{
+	text-decoration:none;
+    color: #E88044;
+	font-size: 16px;
+}
+.ml5 a:hover{
+    color:#999;
+}
+.ml5 p{
+	text-decoration:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.form-control {
+    display: block;
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mainId{
+	width: 70%;
+	margin: auto;
+}
+
+#mainId p{
+	text-align: left;
+	color: #666;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+	font-size: 12px;
+}
+
+.btn-sm, .btn-xs {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn-gray {
+    background-color: #7087A3;
+    border-color: #7087A3;
+    color: #FFFFFF;
+	width: 50%;
+}
+</style>
+
+<body>
+    <div class="options" id="optionsBlock" style="padding:5px;">
+        <div style="width:240px;float:left;" class="ml5">
+			<a href = "https://www.starso.cn/" target="_BLANK"><h3>星维·蓝队分析师助手</h3></a>
+            <br>
+            <img src="img/init.png" style="width: 70px;">
+            <p>威胁情报平台</p>
+			
+			<div id="mainId">
+				<p><label><input type="radio" id="threadbook" name="ioc">微步在线</label></p>
+				<p><label><input type="radio" id="360" name="ioc">360威胁情报中心</label></p>
+                <p><label><input type="radio" id="vt" name="ioc">VirusTotal</label></p>
+                <p><label><input type="radio" id="nf" name="ioc">绿盟威胁情报中心</label></p>
+                <p><label><input type="radio" id="ze" name="ioc">ZoomEye</label></p>
+                <p><label><input type="radio" id="fofa" name="ioc">FoFa</label></p>
+                <p><label><input type="radio" id="tools1" name="ioc">查旁站/Whois</label></p>
+				<p><label><input type="radio" id="diy" name="ioc">自定义:</label></p>
+			</div>
+			<textarea type="text" id="iocdiy" class="form-control" style="margin: auto;" rows=5 cols=23> </textarea>
+            <p style="margin-top: 10px;border-top: 1px solid #ccc;">情报离线碰撞</p>
+            <div id="mainId2">
+                <p style="color:black;font-size:15px;float:left;border:2px">情报更新地址</p>
+                <p><input type="text" id="ioc_update_url" class="form-control" style="margin: auto;"></input></p>
+                <p style="color:black;font-size:15px;float:left;border:2px">作用域</p>
+                <textarea type="text" id="offline_ioc_sites" class="form-control" style="margin: auto;" rows=5 cols=23> </textarea>
+            </div>
+            <p style="margin-top: 10px;border-top: 1px solid #ccc;"></p>
+                                    <!--此处showinfor的提示信息（点击保存按钮触发）-->
+            <p><div id="showinfor" style="color:red;font-size:12px;"></div></p>
+			<p><input type="button" value="保存" id="save" class="btn btn-gray btn-sm"></input></p>
+			
+			<p>Powered by starso.etlab</p>
+        </div>
+        <div class="cl">
+		</div>
+    </div>
+</body>
+
+</html>
