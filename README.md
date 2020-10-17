@@ -12,7 +12,11 @@ https://www.baidu.com/s?wd={IP}
 
 https://www.baidu.com/s?wd={DOMAIN}
 
-其含义是，当用户选择了一个IP地址并点击按钮时，会跳转到https://www.baidu.com/s?wd={IP}，其中{IP}会自动替换成用户选择的IP地址。同理，当用户选择一个域名时，点击按钮会跳转到https://www.baidu.com/s?wd={DOMAIN}，其中的{DOMAIN}会自动替换成之前选择的域名。
+其含义是，当用户选择了一个IP地址并点击按钮时，会跳转到
+https://www.baidu.com/s?wd={IP}
+其中{IP}会自动替换成用户选择的IP地址。同理，当用户选择一个域名时，点击按钮会跳转到
+https://www.baidu.com/s?wd={DOMAIN}
+其中的{DOMAIN}会自动替换成之前选择的域名。
 
 “分析师助手”并不会影响你对浏览器的正常使用，当你选择正常文本时，是不会弹出悬浮按钮的。
 
